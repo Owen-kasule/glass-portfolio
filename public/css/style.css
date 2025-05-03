@@ -1,0 +1,96 @@
+/* 1) Reset & Body */
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Segoe UI',sans-serif; background:#111; color:#fff; }
+
+/* 2) Animated Gradient BG (Hero only) */
+.gradient-bg {
+  position:fixed; top:0; left:0; width:100%; height:100%;
+  background: linear-gradient(45deg, #667eea, #764ba2, #89f7fe, #66a6ff);
+  background-size: 400% 400%;
+  animation: gradientMove 20s ease infinite;
+  z-index:-2;
+}
+@keyframes gradientMove {
+  0%,100%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+}
+
+/* 3) Glassmorphism Utility */
+.glass {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border:1px solid rgba(255,255,255,0.25);
+  border-radius:16px;
+  box-shadow:0 4px 30px rgba(0,0,0,0.1);
+}
+
+/* 4) Header / Nav */
+.nav {
+  position:sticky; top:0; width:100%; padding:1rem;
+  backdrop-filter: blur(8px); z-index:10;
+}
+.nav nav { display:flex; justify-content:center; gap:2rem; }
+.nav a { color:#fff; text-decoration:none; font-weight:600; }
+.nav .active { text-decoration:underline; }
+
+/* 5) Sections */
+.section { display:flex; flex-direction:column; align-items:center; padding:4rem 1rem; }
+.content { max-width:900px; width:100%; margin-top:2rem; }
+
+/* 6) Hero Card */
+.hero-section { min-height:80vh; justify-content:center; }
+.hook-card { padding:3rem; text-align:center; }
+.hook-card h1 { font-size:2.5rem; margin-bottom:1.5rem; font-weight:800; }
+
+/* 7) Buttons */
+.btn {
+  display:inline-block; margin:0.5rem; padding:0.75rem 1.5rem;
+  background:rgba(255,255,255,0.2); border:none; border-radius:8px;
+  text-decoration:none; color:#fff; font-weight:700;
+  transition:background 0.2s;
+}
+.btn:hover { background:rgba(255,255,255,0.3); }
+
+/* 8) Projects Grid & Filters */
+#projects-grid {
+  display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
+  gap:1.5rem; margin-top:1.5rem;
+}
+.project-card {
+  overflow:hidden; cursor:pointer; transition:backdrop-filter 0.3s, box-shadow 0.3s;
+}
+.project-card:hover {
+  backdrop-filter: blur(4px) brightness(1.1);
+  box-shadow:0 0 15px rgba(255,255,255,0.6);
+}
+.project-card img { width:100%; display:block; }
+
+/* Filter Tags */
+.filter-tags {
+  display:flex; flex-wrap:wrap; gap:0.5rem; padding:1rem; justify-content:center;
+}
+.filter-tags button {
+  background:rgba(255,255,255,0.15); border:none; padding:0.5rem 1rem;
+  border-radius:8px; cursor:pointer; transition:background 0.2s;
+}
+.filter-tags button.active,
+.filter-tags button:hover { background:rgba(255,255,255,0.3); }
+
+/* 9) About + Contact Columns */
+.two-column { display:grid; grid-template-columns:1fr 1fr; gap:2rem; }
+.bio-panel { padding:2rem; }
+.bio-panel h2 { margin-bottom:1rem; }
+.bio-panel .skills span {
+  display:inline-block; margin:0.25rem; padding:0.25rem 0.75rem;
+  border:1px solid rgba(255,255,255,0.4); border-radius:6px; font-size:0.85rem;
+}
+
+/* Contact Panel */
+.contact-panel { padding:2rem; }
+.contact-panel input,
+.contact-panel textarea {
+  background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.3);
+  backdrop-filter:blur(8px); width:100%; padding:0.75rem; margin-bottom:1rem;
+  border-radius:8px; color:#fff; resize:none;
+}
