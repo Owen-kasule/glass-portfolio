@@ -88,8 +88,8 @@ html, body {
 
 /* Row 2: flex container for name + subtitle */
 .hero-row {
-  display: inline-flex;
-  flex-direction: column;
+  display: inline-block;
+  position: relative;
 }
 
 /* Name: extra bold & large */
@@ -99,17 +99,19 @@ html, body {
   line-height: 0.85;
   margin-bottom: 0;
   position: relative;
+  display: inline-block;
 }
 
 /* Subtitle: right of name, aligned bottom */
 .subtitle {
-  display: block;
-  text-align: right; /* Align to right bottom of name */
-  margin-top: -0.8rem; /* Pull up closer to name */
-  margin-right: 1rem; /* Right padding */
-  font-size: 1.15rem;  /* Slightly smaller */
-  text-transform: uppercase;
-  letter-spacing: 3px; /* Wider spacing */
+  position: absolute;
+  right: 0;
+  bottom: 0.25rem; /* Adjust for vertical alignment */
+  font-size: 1.15rem;
+  letter-spacing: 3px;
+  white-space: nowrap;
+  margin-left: 0.5rem; /* Small gap from name if needed */
+  text-align: right;
   color: #f2c94c;     /* Keep accent color */
   position: relative;
   bottom: -0.5rem;    /* Better vertical alignment */
