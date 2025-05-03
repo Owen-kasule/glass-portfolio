@@ -1,31 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Owen Kasule Muhereza</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body class="hero-page">
-  <!-- Animated Gradient Background -->
+
+  <!-- 1️⃣ Subtle animated gradient / dark vignette -->
   <div class="gradient-bg"></div>
 
-  <!-- Semi-transparent Header -->
+  <!-- 2️⃣ Semi-transparent nav (glass) -->
   <header class="nav glass nav-blur">
+    <div class="logo">OK</div>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
       <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="about.html#contact">Contact</a>
     </nav>
   </header>
 
-  <!-- Frosted Glass Hook Card -->
+  <!-- 3️⃣ Fixed social icons on the left -->
+  <aside class="social-icons glass nav-blur">
+    <a href="https://github.com/Owen-kasule" target="_blank" aria-label="GitHub">
+      <svg><!-- GitHub icon SVG --></svg>
+    </a>
+    <a href="https://www.linkedin.com/in/owen-muhereza-kasule-teachrooot/" target="_blank" aria-label="LinkedIn">
+      <svg><!-- LinkedIn icon SVG --></svg>
+    </a>
+  </aside>
+
+  <!-- 4️⃣ Hero content centered -->
   <section class="hero-section section">
-    <div class="glass hook-card">
-      <h1>I design interfaces that breathe.</h1>
-      <a href="projects.html" class="btn">View Work</a>
-      <a href="about.html" class="btn">Contact Me</a>
+    <div class="glass hero-content">
+      <p class="pretitle">HI, I’M</p>
+      <h1 class="title">OWEN KASULE</h1>
+      <p class="subtitle">Software Engineer & Technical Problem Solver</p>
+      <div class="scroll-indicator">SCROLL ↓</div>
     </div>
   </section>
+
 </body>
 </html>

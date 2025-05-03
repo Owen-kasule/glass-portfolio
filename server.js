@@ -26,7 +26,7 @@ app.post('/api/contact', (req, res) => {
 
 // Admin protection
 app.use('/admin', basicAuth({
-  users: { 'admin': 'StrongPassword123' },
+  users: { 'owen': 'Owen@1738' },
   challenge: true
 }));
 
