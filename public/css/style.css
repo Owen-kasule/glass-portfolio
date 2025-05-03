@@ -40,7 +40,7 @@ html, body {
 
 /* 4) Social icons: vertical left */
 .social {
-  position: absolute; left:2rem; top:50%;
+  position: absolute; left:2rem; top:60%;
   transform: translateY(-50%);
   display: flex; flex-direction: column; gap:1.5rem;
 }
@@ -60,11 +60,18 @@ html, body {
   transform: translate(-50%, -50%);
   width: 100%;
   max-width: 900px;
+  text-align: left; /* Align all text to left like reference */
+  padding-left: 2rem; /* Match reference indentation */
 }
 
 /* Row 1: Remove "HI IM" completely */
 .pret {
-  display: none;
+  display: block; /* Keep visible */
+  text-align: left;
+  font-size: 0.9rem;
+  letter-spacing: 4px;
+  margin-bottom: 1rem;
+  color: #aaa;
 }
 
 /* Row 2: flex container for name + subtitle */
@@ -77,20 +84,23 @@ html, body {
 /* Name: extra bold & large */
 .title {
   margin: 0;
-  font-size: 7rem;    /* Increased from 6rem */
+  font-size: 6.5rem;    /* Increased from 6rem */
   font-weight: 900;
   color: #eee;
-  line-height: 1;
-  letter-spacing: -3px; /* Tighter spacing like reference */
-  margin-bottom: -1rem; /* Pull subtitle closer */
+  line-height: 0.9; /* Tighter line height */
+  letter-spacing: -2px; /* Tighter spacing like reference */
+  margin-bottom: 0.5rem; /* Space before subtitle */
 }
 
 /* Subtitle: right of name, aligned bottom */
 .subtitle {
-  margin: 0;
-  font-size: 1.1rem;  /* Slightly smaller */
+  display: block;
+  text-align: right; /* Align to right bottom of name */
+  margin-top: -1.5rem; /* Pull up closer to name */
+  margin-right: 1rem; /* Right padding */
+  font-size: 1.15rem;  /* Slightly smaller */
   text-transform: uppercase;
-  letter-spacing: 5px; /* Wider spacing */
+  letter-spacing: 3px; /* Wider spacing */
   color: #f2c94c;     /* Keep accent color */
   position: relative;
   bottom: -0.5rem;    /* Better vertical alignment */
@@ -98,8 +108,8 @@ html, body {
 
 /* 6) Footer page number: bottom center */
 .footer {
-  position: absolute; bottom:1.5rem; left:50%;
-  transform: translateX(-50%);
+  position: absolute; bottom:2rem; left:2rem;
+  transform: none;
 }
 .page-number {
   font-size: 0.9rem; color: #888;
