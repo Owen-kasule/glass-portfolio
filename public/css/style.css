@@ -55,26 +55,42 @@ html, body {
 
 /* 5) Hero text block: perfectly centered */
 .hero {
-  position: absolute; top:50%; left:50%;
+  position: absolute;
+  top: 50%; left: 50%;
   transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 900px;
   text-align: center;
 }
 .pret {
-  font-size: 0.85rem; letter-spacing: 4px;
-  color: #aaa; margin-bottom: 0.5rem;
+  font-size: 0.85rem;
   text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #aaa;
+  white-space: nowrap;
+  margin: 0;
 }
 .gold-line {
-  width: 100px; height: 3px;
-  background: #f2c94c;
-  margin: 0.5rem auto 1.5rem;
+  flex: 1;                 /* take up remaining space */
+  height: 2px;
+  background-color: #f2c94c;
+  max-width: 300px;        /* same length as your reference */
 }
 .title {
-  font-size: 4rem; font-weight: 900;
-  letter-spacing: 2px; margin-bottom: 1rem;
+  font-size: 6rem;         /* bumped up for more impact */
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: #eee;
+  margin: 0 0 0.75rem;     /* tight space before subtitle */
+  line-height: 1;
 }
 .subtitle {
-  font-size: 1.1rem; color: #ccc;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #f2c94c;
+  margin: 0;
+  text-align: right;
 }
 
 /* 6) Footer page number: bottom center */
