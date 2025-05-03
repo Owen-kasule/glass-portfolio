@@ -40,7 +40,7 @@ html, body {
 
 /* 4) Social icons: vertical left */
 .social {
-  position: absolute; left:2rem; top:60%;
+  position: absolute; left:2rem; top:55%;
   transform: translateY(-50%);
   display: flex; flex-direction: column; gap:1.5rem;
 }
@@ -64,39 +64,48 @@ html, body {
   padding-left: 2rem; /* Match reference indentation */
 }
 
-/* Row 1: Remove "HI IM" completely */
+/* Row 1: "HI IM" with line and doubled size */
 .pret {
-  display: block; /* Keep visible */
-  text-align: left;
-  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.7rem;
   letter-spacing: 4px;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   color: #aaa;
+  width: 100%;
+  max-width: 900px; /* Match hero container */
+}
+.pret::after {
+  content: "";
+  height: 10px; /* Thicker line */
+  background: #03d6fc;
+  flex: 1;
+  margin-right: calc(6.5rem - 0.7rem); /* Align with name end */
+  position: relative;
+  top: 1px; /* Optical alignment */
 }
 
 /* Row 2: flex container for name + subtitle */
 .hero-row {
-  display: flex;
-  justify-content: center; /* Center horizontally instead of space-between */
-  align-items: center; /* Center vertically instead of flex-end */
+  display: inline-flex;
+  flex-direction: column;
 }
 
 /* Name: extra bold & large */
 .title {
   margin: 0;
-  font-size: 6.5rem;    /* Increased from 6rem */
-  font-weight: 900;
-  color: #eee;
-  line-height: 0.9; /* Tighter line height */
-  letter-spacing: -2px; /* Tighter spacing like reference */
-  margin-bottom: 0.5rem; /* Space before subtitle */
+  font-size: 6.5rem;
+  line-height: 0.85;
+  margin-bottom: 0;
+  position: relative;
 }
 
 /* Subtitle: right of name, aligned bottom */
 .subtitle {
   display: block;
   text-align: right; /* Align to right bottom of name */
-  margin-top: -1.5rem; /* Pull up closer to name */
+  margin-top: -0.8rem; /* Pull up closer to name */
   margin-right: 1rem; /* Right padding */
   font-size: 1.15rem;  /* Slightly smaller */
   text-transform: uppercase;
@@ -111,8 +120,11 @@ html, body {
   position: absolute; bottom:2rem; left:2rem;
   transform: none;
 }
+.page-number::before {
+  content: "#";
+}
 .page-number {
-  font-size: 0.9rem; color: #888;
+  font-size: 1rem;
 }
 
 /* 7) Scroll indicator: vertical right */
