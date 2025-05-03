@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Admin | Owen’s Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="section">
+  <div class="glass content">
+    <h2>🔒 Admin Dashboard</h2>
+
+    <h3>Projects</h3>
+    <pre id="raw-projects"></pre>
+
+    <h3>Messages</h3>
+    <pre id="raw-messages"></pre>
+  </div>
+
+  <script>
+    // Fetch protected data
+    fetch('/admin/projects').then(r=>r.text()).then(t=>document.getElementById('raw-projects').textContent=t);
+    fetch('/admin/messages').then(r=>r.text()).then(t=>document.getElementById('raw-messages').textContent=t);
+  </script>
+</body>
+</html>
