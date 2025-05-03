@@ -107,12 +107,12 @@ html, body {
   position: absolute;
   right: 0;
   bottom: 0.25rem; /* Adjust for vertical alignment */
-  font-size: 1.15rem;
+  font-size: 1.55rem;
   letter-spacing: 3px;
   white-space: nowrap;
   margin-left: 0.5rem; /* Small gap from name if needed */
   text-align: right;
-  color: #f2c94c;     /* Keep accent color */
+  color: #03d6fc;     /* Keep accent color */
   position: relative;
   bottom: -0.5rem;    /* Better vertical alignment */
 }
