@@ -1,18 +1,115 @@
 /* 1) Reset & Body */
 * { margin:0; padding:0; box-sizing:border-box; }
-body { font-family:'Segoe UI',sans-serif; background:#111; color:#fff; }
-
-/* 2) Animated Gradient BG (Hero only) */
-.gradient-bg {
-  position:fixed; top:0; left:0; width:100%; height:100%;
-  background: linear-gradient(45deg, #667eea, #764ba2, #89f7fe, #66a6ff);
-  background-size: 400% 400%;
-  animation: gradientMove 20s ease infinite;
-  z-index:-2;
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+  height: 100vh;
 }
-@keyframes gradientMove {
-  0%,100%{background-position:0% 50%}
-  50%{background-position:100% 50%}
+
+/* 2) Background Vignette */
+.hero-bg {
+  position: absolute; top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: radial-gradient(circle at center, #2b2d34 0%, #111 80%);
+  z-index: -1;
+}
+
+/* 3) Nav Bar */
+.nav {
+  position: absolute; top: 2rem; left: 2rem; right: 2rem;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.logo {
+  font-size: 1.5rem; font-weight: 900;
+  letter-spacing: 2px;
+}
+.menu a {
+  margin-left: 2rem;
+  text-decoration: none;
+  color: #ddd;
+  font-weight: 600;
+  transition: color .2s;
+}
+.menu a:hover {
+  color: #fff;
+}
+
+/* 4) Social Icons (Left) */
+.social {
+  position: absolute; left: 2rem; top: 50%;
+  transform: translateY(-50%);
+  display: flex; flex-direction: column; gap: 1.5rem;
+}
+.social img {
+  width: 24px; height: 24px;
+  filter: brightness(0) invert(1);
+  transition: filter .2s;
+}
+.social a:hover img {
+  filter: brightness(1) invert(1);
+}
+
+/* 5) Hero Section */
+.hero {
+  position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  max-width: 800px;
+  padding: 0 1rem;
+}
+.pret {
+  font-size: 0.9rem; letter-spacing: 4px;
+  color: #aaa; text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+.gold-line {
+  width: 120px; height: 3px;
+  background: #f2c94c;
+  margin: 0.5rem auto 1.5rem;
+}
+.title {
+  font-size: 4rem; font-weight: 900;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+.subtitle {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+/* 6) Footer Page Number */
+.footer {
+  position: absolute; bottom: 2rem; left: 50%;
+  transform: translateX(-50%);
+}
+.page-number {
+  font-size: 1rem; color: #888;
+}
+
+/* 7) Scroll Indicator (Right) */
+.scroll-indicator {
+  position: absolute; right: 2rem; top: 50%;
+  transform: translateY(-50%) rotate(90deg);
+  transform-origin: center;
+  font-size: 0.9rem;
+  letter-spacing: 4px;
+  color: #888;
+}
+.scroll-line {
+  display: block;
+  width: 1px; height: 40px;
+  background: #888;
+  margin-top: 0.5rem;
+}
+
+/* 8) Utility Hover States */
+.menu a:hover,
+.social a:hover img,
+.scroll-indicator:hover {
+  color: #f2c94c;
+  background: none;
 }
 
 /* --- Hero Page Overrides --- */
