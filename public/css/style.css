@@ -60,42 +60,45 @@ html, body {
   transform: translate(-50%, -50%);
   width: 100%;
   max-width: 900px;
-  text-align: center;
 }
+
+/* Row 1: Remove "HI IM" completely */
 .pret {
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  color: #aaa;
-  white-space: nowrap;
-  margin: 0;
+  display: none;
 }
-.gold-line {
-  flex: 1;                 /* take up remaining space */
-  height: 2px;
-  background-color: #f2c94c;
-  max-width: 300px;        /* same length as your reference */
+
+/* Row 2: flex container for name + subtitle */
+.hero-row {
+  display: flex;
+  justify-content: center; /* Center horizontally instead of space-between */
+  align-items: center; /* Center vertically instead of flex-end */
 }
+
+/* Name: extra bold & large */
 .title {
-  font-size: 6rem;         /* bumped up for more impact */
-  font-weight: 900;
-  letter-spacing: 2px;
-  color: #eee;
-  margin: 0 0 0.75rem;     /* tight space before subtitle */
-  line-height: 1;
-}
-.subtitle {
-  font-size: 1.1rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: #f2c94c;
   margin: 0;
-  text-align: right;
+  font-size: 7rem;    /* Increased from 6rem */
+  font-weight: 900;
+  color: #eee;
+  line-height: 1;
+  letter-spacing: -3px; /* Tighter spacing like reference */
+  margin-bottom: -1rem; /* Pull subtitle closer */
+}
+
+/* Subtitle: right of name, aligned bottom */
+.subtitle {
+  margin: 0;
+  font-size: 1.1rem;  /* Slightly smaller */
+  text-transform: uppercase;
+  letter-spacing: 5px; /* Wider spacing */
+  color: #f2c94c;     /* Keep accent color */
+  position: relative;
+  bottom: -0.5rem;    /* Better vertical alignment */
 }
 
 /* 6) Footer page number: bottom center */
 .footer {
-  position: absolute; bottom:2rem; left:50%;
+  position: absolute; bottom:1.5rem; left:50%;
   transform: translateX(-50%);
 }
 .page-number {
