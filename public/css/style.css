@@ -26,6 +26,12 @@ html, body {
 .logo {
   font-size: 1.5rem; font-weight: 900; letter-spacing: 2px;
 }
+.logo-img {
+  height: 2.2rem;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
 .menu a {
   margin-left: 2rem;
   text-decoration: none;
