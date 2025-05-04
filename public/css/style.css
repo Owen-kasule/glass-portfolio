@@ -59,6 +59,19 @@ html, body {
   color: #fff;
 }
 
+/* Add to your CSS, after .social a:hover or at the end */
+.social-icon {
+  width: 28px;
+  height: 28px;
+  display: block;
+  filter: grayscale(1) brightness(0.8) invert(0.8);
+  transition: filter 0.2s, transform 0.2s;
+}
+.social a:hover .social-icon {
+  filter: none;
+  transform: scale(1.1);
+}
+
 /* 5) Hero text block: perfectly centered */
 .hero {
   position: absolute;
